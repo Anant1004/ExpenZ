@@ -52,7 +52,7 @@ const ExpenseForm = () => {
     };
 
     return (
-        <div className='w-full h-96 md:flex mt-4 items-center justify-center gap-3 '>
+        <div className='w-full h-96 md:flex mt-4 items-center justify-center gap-3 md:px-0 px-2'>
             <form className='bg-zinc-500 md:w-[50%] h-full rounded-3xl p-3 flex flex-col gap-5' onSubmit={handleSubmit}>
                 <h1 className='md:text-4xl text-xl'>Add your expenses 💲💲💲</h1>
                 <input
