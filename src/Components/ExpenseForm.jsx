@@ -53,7 +53,7 @@ const ExpenseForm = () => {
 
     return (
         <div className='w-full h-96 md:flex mt-4 items-center justify-center gap-3 md:px-0 px-2'>
-            <form className='bg-zinc-500 md:w-[50%] h-full rounded-3xl p-3 flex flex-col gap-5' onSubmit={handleSubmit}>
+            <form className='bg-[#468499] md:w-[50%] h-full rounded-3xl p-3 flex flex-col gap-5' onSubmit={handleSubmit}>
                 <h1 className='md:text-4xl text-xl'>Add your expenses 💲💲💲</h1>
                 <input
                     type="text"
@@ -82,7 +82,7 @@ const ExpenseForm = () => {
                     Add Expense
                 </button>
             </form>
-            <div className='md:w-[40%] bg-zinc-500 rounded-3xl p-3 flex flex-col gap-5 md:mt-0 mt-5'>
+            <div className='md:w-[40%] bg-[#468499] rounded-3xl p-3 flex flex-col gap-5 md:mt-0 mt-5'>
                 <h1 className='md:text-4xl text-xl'>Your expenses 🤑</h1>
                 <ul className='flex flex-col gap-2'>
                     {expenses.length === 0 ? (
