@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-      <div className=" main bg-slate-600 w-full h-screen flex flex-col"style={{ fontFamily: 'Nerko One' }}>
+      <div className=" main bg-slate-600 h-dvh w-full flex flex-col"style={{ fontFamily: 'Nerko One' }}>
         <Navbar/>
         <ExpenseForm/>
       </div>

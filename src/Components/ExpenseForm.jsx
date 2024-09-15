@@ -57,6 +57,7 @@ const ExpenseForm = () => {
                 <h1 className='md:text-4xl text-xl'>Add your expenses 💲💲💲</h1>
                 <input
                     type="text"
+                    placeholder="Expense Name"
                     required
                     className='outline-none h-12 p-3 text-2xl rounded-full'
                     value={expenseName}
@@ -81,19 +82,23 @@ const ExpenseForm = () => {
                     Add Expense
                 </button>
             </form>
-            <div className='md:w-[40%] h-full bg-zinc-500 rounded-3xl p-3 flex flex-col gap-5 md:mt-0 mt-5'>
+            <div className='md:w-[40%] bg-zinc-500 rounded-3xl p-3 flex flex-col gap-5 md:mt-0 mt-5'>
                 <h1 className='md:text-4xl text-xl'>Your expenses 🤑</h1>
                 <ul className='flex flex-col gap-2'>
-                    {expenses.map((expense, index) => (
-                        <li key={index} className='w-full h-12 bg-white list-none rounded-full flex items-center justify-between p-3'>
-                            <span>{expense.name} - {expense.date} - ${expense.amount}</span>
-                            <button 
-                                onClick={() => handleDelete(index)}
-                                className='bg-red-500 text-white rounded-full px-3 py-1'>
-                                Delete
-                            </button>
-                        </li>
-                    ))}
+                    {expenses.length === 0 ? (
+                        <li className='text-white text-2xl'>No expenses to show !!</li>
+                    ) : (
+                        expenses.map((expense, index) => (
+                            <li key={index} className='w-full h-12 bg-white list-none rounded-full flex items-center justify-between p-3'>
+                                <span>{expense.name} - {expense.date} - ${expense.amount}</span>
+                                <button
+                                    onClick={() => handleDelete(index)}
+                                    className='bg-red-500 text-white rounded-full px-3 py-1'>
+                                    Delete
+                                </button>
+                            </li>
+                        ))
+                    )}
                 </ul>
             </div>
         </div>
